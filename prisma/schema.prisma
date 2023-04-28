@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:Meetri@123@103.118.157.218:5432/social_media_db"
+}
+
+model facebook {
+  id          Int     @id @default(autoincrement())
+  posttype    String  @db.VarChar(100)
+  accesstoken String  @db.VarChar(500)
+  entityid    String  @db.VarChar(200)
+  time        String  @db.VarChar(200)
+  message     String  @db.VarChar(100)
+  file        String? @db.VarChar(200)
+  poststatus  String  @db.VarChar(200)
+}
+
+model linkedin {
+  id          Int     @id @default(autoincrement())
+  posttype    String  @db.VarChar
+  accesstoken String  @db.VarChar
+  entityid    String  @db.VarChar
+  time        String  @db.VarChar
+  message     String  @db.VarChar
+  file        String? @db.VarChar
+  poststatus  String? @db.VarChar
+}
+
+model users {
+  id          Int     @id @default(autoincrement())
+  accesstoken String? @db.VarChar
+  name        String? @db.VarChar
+}
