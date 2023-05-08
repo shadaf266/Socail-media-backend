@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:Meetri@123@103.118.157.218:5432/social_media_db"
+  url      = env('DATABASE_URL')
 }
 
 model facebook {
