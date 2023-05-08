@@ -9,6 +9,8 @@ import { fetchGroupsLkd, fetchPagesLkd, imageUploadLkd, postArticleImageLkd, pos
 import { fetchGroupsFb, fetchPagesFb, postImageFb, postTextFb } from "./controllers/facebook";
 import { scheduleFbImage } from "./controllers/facebook/schedule";
 import { scheduleLkdImage } from "./controllers/linkedin/schedule";
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 //Declaring Important variables
 const upload = multer.diskStorage({
