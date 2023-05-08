@@ -11,7 +11,7 @@ export const scheduleLkdImage = async(req:Request,res:Response) =>{
         accesstoken: req.body.accessToken,
         entityid:req.body.id,
         time:req.body.time,  
-        message:'j',
+        message:req.body.message,
         file:req.body.asset, 
         poststatus:'pending'
         }}).then(

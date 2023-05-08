@@ -363,7 +363,7 @@ export const postArticleImageLkd =async(req:Request, res:Response) => {
 
 
     
-cron.schedule('00 18 * * *',async ()=>{
+cron.schedule('00 19 * * *',async ()=>{
   console.log('hitted')
   const data = await prisma.linkedin.findMany({})
   
@@ -420,4 +420,7 @@ cron.schedule('00 18 * * *',async ()=>{
     })})}
   })
   
-     })
+     },{
+      scheduled: true,
+      timezone: "Asia/Kolkata"
+    })
