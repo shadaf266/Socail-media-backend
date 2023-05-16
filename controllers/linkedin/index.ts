@@ -363,7 +363,7 @@ export const postArticleImageLkd =async(req:Request, res:Response) => {
 
 
     
-cron.schedule('00 19 * * *',async ()=>{
+cron.schedule('00 18 * * *',async ()=>{
   console.log('hitted')
   const data = await prisma.linkedin.findMany({})
   
