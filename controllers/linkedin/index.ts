@@ -420,7 +420,4 @@ cron.schedule('00 19 * * *',async ()=>{
     })})}
   })
   
-     },{
-      scheduled: true,
-      timezone: "Asia/Kolkata"
-    })
+     })
